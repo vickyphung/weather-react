@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Home from './Home';
+import HomeThree from './Components/HomeThree';
+import React, { useEffect, useState } from "react";
+import Zipcode from './Components/Zipcode'
+import Coordinates from './Components/Coordinates';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="AppContainer">
+
+        <div>
+          <Routes>
+
+            <Route path="/" element={<Home />} />
+            <Route path="/coordinates" element={<Coordinates />} />
+            <Route path="/zipcode" element={<Zipcode />} />
+                      
+
+          </Routes>
+        </div>
+      </div>
   );
 }
 
