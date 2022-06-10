@@ -1,26 +1,20 @@
 import './App.css';
 import { Route, Routes } from "react-router-dom";
 import Home from './Home';
-import HomeThree from './Components/HomeThree';
-import React, { useEffect, useState } from "react";
-import Zipcode from './Components/Zipcode'
-import Coordinates from './Components/Coordinates';
+import Search from './Components/Search';
+import Nav from './Components/Nav';
+import Geolocate from './Components/Geolocate';
 
 function App() {
 
   return (
-    <div className="AppContainer">
-
-        <div>
+    <div className="AppContainer">   
+      <div><Nav /></div>
           <Routes>
-
             <Route path="/" element={<Home />} />
-            <Route path="/coordinates" element={<Coordinates />} />
-            <Route path="/zipcode" element={<Zipcode />} />
-                      
-
+            <Route path="/search" element={<Search />} />
+            <Route path="/geolocate" element={<Geolocate />} />
           </Routes>
-        </div>
       </div>
   );
 }

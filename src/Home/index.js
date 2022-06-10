@@ -1,25 +1,14 @@
 import './style.css';
-import Nav from '../Components/Nav';
-import HomeThree from '../Components/HomeThree';
-import Zipcode from '../Components/Zipcode';
-import Current from '../Components/Current';
-import Coordinates from '../Components/Coordinates';
+import Geolocate from '../Components/Geolocate';
+import Search from '../Components/Search';
 
-
-function Home(props) {
-  
-  //test prop for test prop passing
-  const blue = "Prop from home to current as Blue"
-
+function Home(props) {  
 
   return (
     <div className="homeContainer">
         <div className="homeContent">     
-
-            <div><Nav /></div>
-                <Zipcode />
-                <Coordinates />
-                <Current />
+            <div><Geolocate /></div>
+            <div><Search /></div>
         </div>
         </div>
       );

@@ -1,47 +1,48 @@
 import { useEffect, useReducer, useState } from 'react'
 import axios from 'axios'
 import Current from '../Current';
+import Nav from '../Nav';
 
-function Coordinates(props) {
+function Zipcode(props) {
 
+    const weather_url = 'https://api.openweathermap.org/data/2.5/weather?'
+    
     const [weatherData, setWeatherData] = useState({}); 
 
     const [formData, setFormData] = useState({
-        lat: 0,
-        lon: 0
+        zipcode: ""
     })
 
-  const [latAndLon, setLatAndLon] = useState({
-    // lat: 38.88,
-    // lon: -77.05
-  })
+    const [zipcode, setZipcode] = useState('22312')
+      
 
   useEffect(() => {
     const fetchData = async () => {
       console.log('test');
-      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latAndLon.lat}&lon=${latAndLon.lon}&units=imperial&appid=${process.env.REACT_APP_WEATHER_KEY}`)
+      const response = await axios.get(`${weather_url}zip=${zipcode},us&units=imperial&appid=${process.env.REACT_APP_WEATHER_KEY}`)
       setWeatherData(response.data)
       console.log(weatherData)
     }
     fetchData();
-  }, [latAndLon])
+  }, [zipcode])
 
 
   const handleChange = (event) => {
-    setFormData({...formData, [event.target.name]: event.target.value})
+    setFormData(event.target.value)
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    setLatAndLon(formData)
+    setZipcode(formData)
   }
   
-  //test prop for test prop passing
-  const blue = "Prop from home to current as Blue"
+//   //test prop for test prop passing
+//   const blue = "Prop from home to current as Blue"
 
 
   return (
-    <div className="homeContainer">
+    <div className="Container">
+              <div><Nav /></div>
         <div className="homeContent">      
         {console.log("weather data FETCHED")}
 
@@ -54,20 +55,16 @@ function Coordinates(props) {
 
         <div>
             <p className="weatherForm">
-                Weather by Coordinates
+                Weather by Zipcode
             </p>
             <form onSubmit={handleSubmit}>
-                <input name="lat" id="lat" placeholder="latitude" onChange={handleChange} /> <br></br>
-                <input name="lon" id="lon" placeholder="longitude" onChange={handleChange} /> <br></br>
+                <input name="zipcode" id="zipcode" placeholder="enter zipcode" onChange={handleChange} /> <br></br>
                 <input type="submit" />
             </form>
         </div>
 
 
 
-        {/* testing prop passing
-         <div> <Current blue={blue} /> </div>
-        */}
 
 
           </div>
@@ -75,4 +72,4 @@ function Coordinates(props) {
       );
     }
 
-export default Coordinates;
+export default Zipcode;

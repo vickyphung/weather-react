@@ -1,21 +1,14 @@
+import { Link } from "react-router-dom";
 
-
-function Nav(props) {
+function Nav() {
   
-
-
   return (
     <div className="navBar">
-     
-
-        <p><a href='/'>Home</a></p>
-        <p><a href='/coordinates'>Coordinates</a></p>
-        <p><a href='/zipcode'>Zipcode</a></p>
-
-       
-    
-        </div>
-      );
-    }
+      <p><Link to='/'>Home</Link></p>
+      <p><Link to='/geolocate'>Geolocation</Link></p>
+      <p><Link to='/search'>Weather</Link></p>   
+    </div>
+  );
+}
 
 export default Nav;

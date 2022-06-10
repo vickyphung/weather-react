@@ -1,0 +1,23 @@
+.currentDetails {
+    display: flex;
+}
+
+.currentContent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    align-content: center;
+}
+
+li {
+    border: 1px solid green;
+    padding: 1em;
+    margin: 2px;
+    background-color: pink;
+}
