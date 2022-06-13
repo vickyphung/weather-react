@@ -6,9 +6,9 @@ function Home(props) {
 
   return (
     <div className="homeContainer">
-        <div className="homeContent">     
-            <div><Geolocate /></div>
-            <div><Search /></div>
+        <div className="homeContent">   
+            <h1 className='title'>Weather</h1>
+            <Search />
         </div>
         </div>
       );

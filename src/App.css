@@ -4,3 +4,52 @@
   margin-right: auto;
   width: 100%;
 }
+
+
+
+/* Light Mode Styles */
+
+.bg-light {
+  background-color: rgb(249, 243, 252);
+}
+
+.heading-light {
+  color: #222;
+}
+
+.para-light {
+  color: rgb(90, 87, 87);
+}
+
+
+.btn {
+  height: 2rem;
+  border-radius: .5em;
+  margin-top: .5rem;
+}
+
+.btn-light {
+  background-color: rgb(233, 210, 241);
+  color: rgb(31, 10, 39);
+  cursor: pointer;
+  border: none;
+}
+
+/* Dark Mode Styles */
+
+.bg-dark {
+  background-color: rgb(31, 10, 39);
+}
+
+.heading-dark {
+  color: #fff;
+}
+
+.para-dark {
+  color: #fff;
+}
+
+.btn-dark {
+  background-color: rgb(64, 34, 104);
+  color: rgb(233, 210, 241);
+}

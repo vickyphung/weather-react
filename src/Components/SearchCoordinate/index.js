@@ -15,15 +15,13 @@ import axios from 'axios'
   useEffect(()=>{
       const fetchData = async () => {
           if (props.zipcodeInput) {
-              console.log ("Zipcode Input Successfully Passed")
+              console.log ("Zipcode Input Successfully Passed and Coordinates data fetched")
               const response = await axios.get(`http://api.openweathermap.org/geo/1.0/zip?zip=${props.zipcodeInput},us&appid=${process.env.REACT_APP_WEATHER_KEY}`)
               setZipData(response.data)
-              console.log("Coordinates data fetched")
               //sets lat and lon data, sends to Weather to fetch weather data based on lat/lon coordinates
               props.setLatitude(zipData.lat)
               props.setLongitude(zipData.lon)
           } 
-          console.log(zipData.lat)
 
           //moved this function to it's own component, Weather
           // let results = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${zipData.lat}&lon=${zipData.lon}&units=imperial&exclude=minutely&appid=788366a04033c9058cc21a81db1e1ee8`)
@@ -32,17 +30,14 @@ import axios from 'axios'
       fetchData();
     }, [props.zipcodeInput])
 
-  console.log(zipData)
+
 
   return (
-    <div id="ran" className="searchContainer">
-      <div className="zipData">
-          <p> {zipData.country}</p>
-          <p>{zipData.name}</p>
-          <p>{zipData.zip}</p>
-          <p> {zipData.lat}</p>
-          <p> {zipData.lon}</p>
-      </div>
+    <div className="zipData">
+        {console.log(zipData)}
+        <p> {zipData.country}</p>
+        <p>{zipData.name}</p>
+        <p>{zipData.zip}</p>
     </div>
   );
 }

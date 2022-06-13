@@ -16,9 +16,7 @@ export default function Geolocate () {
             setLong(position.coords.longitude);
         });
   
-        let response = await axios.get(`https://api.ipgeolocation.io/timezone?apiKey=1487901be6f44fbbbf4de0d837611d87&lat=${lat}&long=${long}`)
-            setData(response.data)
-            console.log(response.data);
+
 
         let results = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=1487901be6f44fbbbf4de0d837611d87&include=useragent`)
             setIPInfo(results.data)
@@ -30,31 +28,16 @@ export default function Geolocate () {
     }, [lat,long])
 
     return (
-        <div>
-        
-            <div>Date {data.date}</div>
-            <div>Time {data.time_12}</div>
-            <div>Timezone {data.timezone}</div>
-            
-            <div>Latitutde {lat}</div>
-            <div>Longitude {long}</div>
+        <div className="geolocate">
             <div><span>{ipInfo.country_name}</span></div>
             <div><span>{ipInfo.state_prov}</span></div>
             <div><span>{ipInfo.city}</span></div>
             <div><span>{ipInfo.zipcode}</span></div>
-            <div><span>{ipInfo.ip}</span></div>
+            <div><span>{ipInfo.latitude}° lat</span></div>
+            <div><span>{ipInfo.longitude}° lon</span></div>
             <div><span>{ipInfo.isp}</span></div>
+            <div><span>{ipInfo.ip}</span></div>
 
-
-
-
-
-
-
-
-
-
-
-    </div>
+        </div>
 )
 }

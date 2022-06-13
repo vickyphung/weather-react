@@ -19,9 +19,9 @@ function SearchCoordinateInput (props) {
   return (
     <div className="searchCoordInput">
         <div className="searchCoordInputContent">      
-          <form onSubmit={handleSubmit}>
+          <form className="searchForm" onSubmit={handleSubmit}>
             <input className="searchCoordForm" name="zip" id="zip" placeholder="Zipcode" onChange={handleChange} /> <br></br>
-            <input className="submitBtn" type="submit" />
+            <input className="submitBtn" type="submit" value="🔍" />
           </form>
           </div>
         </div>
@@ -29,6 +29,3 @@ function SearchCoordinateInput (props) {
     }
 
 export default SearchCoordinateInput;
-
-
-

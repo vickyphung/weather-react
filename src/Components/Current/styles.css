@@ -1,23 +1,78 @@
-.currentDetails {
-    display: flex;
+.currentContent{
+    margin: 1.5em;
+    margin-top: 2em;
 }
 
-.currentContent {
+
+.currentMain {
+    border: 2px solid rgb(220, 219, 223);
+    border-radius: .75em;
+    padding: 1em;
+    background-color: pink;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.weatherIcon {
+    width: 100px;
+    height:auto;
+}
+
+.currentTemp{
+    font-size: 2.75vw;
+}
+.currentItem {
+    border: 2px solid rgb(220, 219, 223);
+    border-radius: .75em;
+    padding: 1em;
+    background-color: pink;
+    display: flex;
+    gap: .75rem;
     flex-wrap: wrap;
 }
 
-ul {
+.currentOther{
     display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    justify-content: center;
+}
+
+img {
+    width: 75px;
+}
+
+.flexCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.heading {
+    font-weight: bold;
+}
+
+.showBtn {
+    margin: 2rem;
+}
+.weekBtn {
+    text-align: center;
+    border-radius: .5em;
+    margin-top: .5rem;
+    font-size: 2vw;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+}
+
+.weekBtn:hover {
+    background-color: rgb(255, 232, 236);
+}
+
+.z {
+    display: flex;
+    width: 100%;
     align-content: center;
 }
 
-li {
-    border: 1px solid green;
-    padding: 1em;
-    margin: 2px;
-    background-color: pink;
+.hourContainer {
+    margin: 1rem;
 }

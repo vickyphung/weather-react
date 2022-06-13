@@ -1,35 +1,77 @@
   .navBar{
     display: inline-flex;
     gap: 1rem;
-    background-color: pink;
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem;
+    margin-bottom: 0;
   }
+
+  a {
+    text-decoration: none;
+    border-radius: .25em;
+    padding: .45rem;
+    background-color: rgb(233, 210, 241);
+    letter-spacing: 1.5px;
+    font-weight: 500;
+  }
+
   .homeContainer {
     display: flex;
-    border: 1px solid orange;
     width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    font-size: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .homeContent {
-    width: 100%;
+    width: 98vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .title {
+    font-size: 5vw;
+    padding: 1rem;
+    border-radius: .2em;
+    border: 3px solid rgb(233, 233, 233);
+  }
+
+  .zipData{
+    display: flex;
+    gap: 2rem;
+    letter-spacing: .25px;
+    font-size: 3vw;
+    font-weight: bold;
+  }
+
+  .search {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
 
   }
-  input[name=lat], input[name=lon] {
-    border: 1px solid gray;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    width: 35%;
-    }
+  .searchForm {
+    display: flex;
+    gap: 1.5px;
+  }
   
+  .searchCoordForm {
+    height: 2rem;
+    border-radius: .5em;
+    padding: 2px;
+    text-align: center;
+    border: none;
+  }
+
+
   input[type=submit] {
-    padding:5px 10px;
-    margin-top: 3px; 
+    padding:8px 12px;
+    margin-top: 1px; 
     color: gray;
-    border: white; 
+    border: none;
     background-color: white;
     cursor:pointer;
     -webkit-border-radius: 5px;
@@ -37,16 +79,40 @@
     font-size: .7em;
     font-weight: bold;
   }
-  
-  .hour {
-    color: blue;
+
+  input[type=submit]:hover {
+    background-color: rgb(255, 255, 255);
   }
+  
+
 
   .hourItem {
     border: 1px solid slateblue;
+    width: 11vw;
+    margin: .25rem;
+    padding: .5rem;
+    text-align: center;
+    border-radius: .5em;
   }
 
   .hourContent, .dailyContent {
     display: flex;
     overflow-x: scroll;
+  }
+
+
+  .iconImg{
+    width: 100%;
+    height: 100%;
+  }
+
+  .geolocate {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2.5rem;
+    font-size: 3vw;
+    padding: 5rem;
+    border-radius: 5em;
+    border: 5px solid gray;
   }

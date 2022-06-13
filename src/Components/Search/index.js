@@ -24,9 +24,20 @@ function Search () {
 
     return (
         <div>
-            <div><SearchCoordinateInput setZipcode={setZipcodeInputAndLink}/></div>
-            <div><SearchCoordinate zipcodeInput={zipcodeInput} setLatitude={setLatAndLink} setLongitude={setLonAndLink}/></div>
+            
+            <div className='search'>
+                <div>
+                  <SearchCoordinate zipcodeInput={zipcodeInput} setLatitude={setLatAndLink} setLongitude={setLonAndLink}/>
+                </div>
+                <div>
+                    <SearchCoordinateInput setZipcode={setZipcodeInputAndLink}/>
+                </div>
+            </div>
+
+
             <div><Weather lat={lat} lon={lon}/></div>
+
+
         </div>
     )
 }

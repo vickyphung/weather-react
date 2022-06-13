@@ -25,8 +25,6 @@ function Weather(props) {
     fetchData();
   }, [props.lat, props.lon])
 
-  console.log(weatherData)
-
   return (
     <div className="weather">
       

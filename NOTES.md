@@ -1,81 +1,61 @@
-bY ZIP
-https://api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}
-Please note if country is not specified then the search works for USA as a default.
-https://api.openweathermap.org/data/2.5/weather?zip=22312,us&appid=67811363e42214b8de335480014f721e
-
-USE DIRECT GEOCODING TO GO FROM ZIP/CITY/STATE -> DETAILED HOURLY/DAILY
-need to convert zip/city/state to lat and lon, then use lat and lon to fetch from ONECALL.
-http://api.openweathermap.org/geo/1.0/zip?zip={zip code},{country code}&appid={API key}
-https://openweathermap.org/api/geocoding-api#direct_zip
+#Context API
 
 
-Current weather
-Hourly forecast for 48 hours
-Daily forecast for 7 days
+-a way to pass data through the component tree w/o having to pass props down manually at each level
+-manages state that is required in multiple components (not necessarily a direct child component) w/o passing it all the way down.
 
-zip code
+-context object
+-context provider
+-context consumer
 
-air quality index
-moon phase pictures
-sun position graph
+const Context = createContext();
+
+all components that consume context go w/i the context provider
+
+<Context.Provider value={value}>
+  {/* Children */}
+</Context.Provider>;
+
+useContext hook and pass the Context object 
+
+To subscribe to the Context object, we will use the useContext hook and pass the Context object created by createContext to it. It will read the current context value from the closest matching Provider above it in the tree.
+
+const context = useContext(Context);
+
+only use it for low-frequency updates like the theme and authentication. because whenever the context’s value changes, the descendant components of the Provider will be re-rendered.
+
+#Reducer
+
+-takes 2 arguments
+-current state
+-action
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "TYPE_1":
+      return new_state;
+
+    case "TYPE_2":
+      return new_state;
+
+    default:
+      return state;
+  }
+};
 
 
-&exclude=hourly,daily,minute
-
-&units={units}
-standard, metric and imperial
-For temperature in Fahrenheit and wind speed in miles/hour, use units=imperial
-For temperature in Celsius and wind speed in meter/sec, use units=metric
-Temperature in Kelvin and wind speed in meter/sec is used by default, so there is no need to use the units parameter in the API call if you want this
-
-https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-
-https://api.openweathermap.org/data/2.5/weather?q={city name},{country code}&appid={API key}
-
-https://api.openweathermap.org/data/2.5/weather?q={city name},{state code},{country code}&appid={API key}
+The useReducer hooks take 2 arguments, the reducer function, and the initial state. It will return the current state value and a function called dispatch which should be used to manipulate the state.
 
 
+const [state, dispatch] = useReducer(reducer, initialState);
 
 
+If you pass this state and dispatch to the value prop of the Context Provider, you can consume the state and update it using the dispatch from any consumer.
 
-https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid={API key}
+heroku create -a nameOfApp
 
-
-
-
-http://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&units={units}
-
-standard, metric and imperial
-
-For temperature in Fahrenheit and wind speed in miles/hour, use units=imperial
-For temperature in Celsius and wind speed in meter/sec, use units=metric
-Temperature in Kelvin and wind speed in meter/sec is used by default, so there is no need to use the units parameter in the API call if you want this
-
-
-
-only_current	optional	By using this parameter you can exclude full historical weather data for the specified day, but received the data for only the specified timestamp. If the user specifies this parameter, then the API response will contain only the current section.
-
-To activate this option, please use default value only_current = {true}.
-
+git remote -v
 
 
 
-
-https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
-
-
-
-
-
-SEVEN Components
-Use React Router
-Must use either useContext, useReducer, or both at least once!
-
-
-Use an external API
-Pass Props
-Have at least one FORM
-Must use either useContext, useReducer, or both at least once!
-
-
-You CAN add to your mid mod project. HOWEVER -- You must add more FUNCTIONALITY as well. Add another feature or two, possibly another API that works with it, or just more stuff with the API you used!
+git push heroku main
