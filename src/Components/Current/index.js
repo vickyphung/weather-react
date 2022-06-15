@@ -5,15 +5,6 @@ const Current = (props) => {
        console.log("Made it to the Current Component")
 
 
-
-
-
-
-
-
-
-
-
        
     if (props.currentData){
         return(

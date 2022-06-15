@@ -6,7 +6,6 @@ export default function Geolocate () {
     
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
-  const [data, setData] = useState([]);
   const [ipInfo, setIPInfo] = useState([]);
 
   useEffect(() => {
@@ -18,7 +17,7 @@ export default function Geolocate () {
   
 
 
-        let results = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=1487901be6f44fbbbf4de0d837611d87&include=useragent`)
+        let results = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=1487901be6f44fbbbf4de0d837611d87`)
             setIPInfo(results.data)
             console.log(results.data);
 
