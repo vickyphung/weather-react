@@ -10,7 +10,7 @@ const Current = (props) => {
         return(
             <div className='currentContent'>
                 {console.log (props)}
-                <h2><DateTime /></h2>
+                <h2 className="currentMain"><DateTime /></h2>
                 <div className="currentMain">  
                     <img className="weatherIcon" src={`http://openweathermap.org/img/wn/${props.currentData.weather[0].icon}@2x.png`} /> 
                
@@ -22,7 +22,11 @@ const Current = (props) => {
                     </p>
                     <p className="currentTemp">{props.currentData.weather[0].description} </p>
                 </div>
+
                 <div className="currentOther">
+                
+                <div className="z">
+
                         <div className="currentItem">
                             <div>
                                 <img src="https://www.seekpng.com/png/full/80-803922_happy-raindrop-svg-scrapbook-cut-file-cute-clipart.png"></img>
@@ -56,6 +60,13 @@ const Current = (props) => {
                                 </div>
                             </div>
                         </div>
+                        </div>
+                       
+                      
+
+                        </div>
+
+                        <div className="z">
                         <div className="currentItem">
                             <div>
                                 <img src="https://www.svgrepo.com/show/42601/wind.svg"></img>
@@ -67,22 +78,7 @@ const Current = (props) => {
                                 </div>
                             </div>
                         </div>
-                      
-
-                        </div>
-
-                        <div className="z">
-                        <div className="currentItem">
-                            <div>
-                                <img src="https://cdn-icons-png.flaticon.com/512/2025/2025520.png"></img>
-                            </div>
-                            <div className="flexCol">
-                                <p className="heading">uvi</p>
-                                <div>
-                                    {props.currentData.uvi}
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div className="currentItem">
                             <div>
                             <img src="https://www.svgrepo.com/show/184358/sunrise-dawn.svg"></img>

@@ -33,8 +33,6 @@ function Search () {
                     <SearchCoordinateInput setZipcode={setZipcodeInputAndLink}/>
                 </div>
             </div>
-
-
             <div><Weather lat={lat} lon={lon}/></div>
 
 

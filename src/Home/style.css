@@ -1,4 +1,8 @@
-  .navBar{
+ * {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+ .navBar{
     display: inline-flex;
     gap: 1rem;
     width: 100%;
@@ -17,53 +21,59 @@
   }
 
   .homeContainer {
-    display: flex;
     width: 100%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 2vw;
-    font-family: Arial, Helvetica, sans-serif;
   }
   
   .homeContent {
-    width: 98vw;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .title {
-    font-size: 5vw;
+    font-size: 4em;
     padding: 1rem;
-    border-radius: .2em;
-    border: 3px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    color: #5b6efd;
   }
 
   .zipData{
     display: flex;
     gap: 2rem;
     letter-spacing: .25px;
-    font-size: 3vw;
+    font-size: 1rem;
     font-weight: bold;
   }
 
   .search {
     display: flex;
     flex-direction: column;
-    margin-left: 2rem;
-
+    justify-content: center;
+    align-items: center;
+    background-color: #5b6efd ;
+    color: white;
+    border-radius: 5px;
+    /* width: 400px; */
+    padding: 2em;
+    /* margin-left: 4.5em; */
   }
+
   .searchForm {
     display: flex;
-    gap: 1.5px;
   }
   
+  
   .searchCoordForm {
-    height: 2rem;
-    border-radius: .5em;
+    border-radius: 5px;
     padding: 2px;
     text-align: center;
     border: none;
+    background-color: white ;
+    border: 3px solid #5b6efd;
+    color: white;
+    font-size: 1.75rem;
   }
 
 
@@ -78,28 +88,42 @@
     border-radius: 5px; 
     font-size: .7em;
     font-weight: bold;
+    height: 48px;
   }
 
   input[type=submit]:hover {
     background-color: rgb(255, 255, 255);
   }
   
+.hourContainer, .dailyContainer {
+  width: 580px;
+}
 
-
-  .hourItem {
-    border: 1px solid slateblue;
-    width: 11vw;
-    margin: .25rem;
+  .hourItem, .dailyItem {
+    border: 5px solid #eea56c;
+    background-color: #5b6efd;
+    color: white;
+    /* width: 11vw; */
     padding: .5rem;
     text-align: center;
-    border-radius: .5em;
+    border-radius: 5px;
+    margin: 3px;
   }
 
   .hourContent, .dailyContent {
     display: flex;
     overflow-x: scroll;
   }
+  body::-webkit-scrollbar {
+    background-color: rgb(122, 26, 58);
+    width: 6px;
+    background-color: #5b6efd;
+  }
 
+  .dailyContent{
+    overflow-x: hidden;
+
+  }
 
   .iconImg{
     width: 100%;
@@ -116,3 +140,4 @@
     border-radius: 5em;
     border: 5px solid gray;
   }
+

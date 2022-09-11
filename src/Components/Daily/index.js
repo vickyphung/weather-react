@@ -4,7 +4,7 @@ const Daily = (props) => {
    
     {console.log("Made it to the Daily Component")}
 
-    const [isShown, setIsShown] = useState(false);
+    const [isShown, setIsShown] = useState(true);
 
     const handleClick = event => {
       // 👇️ toggle shown state

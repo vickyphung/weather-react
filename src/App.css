@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -10,7 +9,7 @@
 /* Light Mode Styles */
 
 .bg-light {
-  background-color: rgb(249, 243, 252);
+  background-color: whitel;
 }
 
 .heading-light {

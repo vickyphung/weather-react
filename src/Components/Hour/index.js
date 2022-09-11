@@ -2,10 +2,10 @@ import { useState } from "react";
 
 const Hour = (props) => {
     console.log("Made it to the Hour Component")
-    const [isShown, setIsShown] = useState(false);
+    const [isShown, setIsShown] = useState(true);
 
     const handleClick = event => {
-      // 👇️ toggle shown state
+      // // 👇️ toggle shown state
       setIsShown(current => !current);
   
       // 👇️ or simply set it to true
