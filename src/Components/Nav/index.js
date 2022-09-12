@@ -11,7 +11,6 @@ function Nav() {
     <div className="navBar">
       <p><Link className={`btn ${darkMode ? "btn-dark" : "btn-light"}`} to='/'>weather</Link></p>
       <p><Link className={`btn ${darkMode ? "btn-dark" : "btn-light"}`} to='/geolocate'>geolocate</Link></p>
-  
       <ThemedButton />
     </div>
     </div>
