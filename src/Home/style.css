@@ -94,6 +94,11 @@
     background-color: rgb(255, 255, 255);
   }
   
+  .weekly {
+    font-size: 2rem;
+    color:#eea56c;
+  }
+
 .hourContainer, .dailyContainer {
   width: 515px;
   display: flex;

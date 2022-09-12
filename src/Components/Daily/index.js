@@ -16,7 +16,7 @@ const Daily = (props) => {
   
     return (
       <div className="showBtn">
-        <button className="weekBtn" onClick={handleClick}>Weekly</button>
+        <button className="weekBtn" onClick={handleClick}><span className="weekly">Weekly</span></button>
   
         {/* 👇️ show elements on click */}
         {isShown && (
