@@ -28,7 +28,7 @@ import axios from 'axios'
           //     setWeatherData(results.data)
       }
       fetchData();
-    }, [props.zipcodeInput])
+    }, [props.zipcodeInput, props, zipData.lat, zipData.lon])
 
 
 
