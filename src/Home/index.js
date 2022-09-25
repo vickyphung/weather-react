@@ -1,17 +1,20 @@
-import './style.css';
-import Geolocate from '../Components/Geolocate';
-import Search from '../Components/Search';
+import "./style.css";
+// import Geolocate from '../Components/Geolocate';
+import Search from "../Components/Search";
+import DateTime from "../Components/DateTime";
 
-function Home(props) {  
-
+function Home(props) {
   return (
-    <div className="homeContainer">
-        <div className="homeContent">   
-            <h1 className='title'>Weather</h1>
-            <Search />
-        </div>
-        </div>
-      );
-    }
+    <div className="homeContent">
+      <h1>
+        <span className="title">Weather</span>
+      </h1>
+      <div className="dateSearch">
+        <DateTime />
+        <Search />
+      </div>
+    </div>
+  );
+}
 
 export default Home;

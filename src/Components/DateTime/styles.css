@@ -1,0 +1,18 @@
+.dateTime {
+    display: flex;
+    font-size: 1.25em;
+    gap: 20px;
+}
+
+.date{
+    color: rgb(205, 220, 248);
+    border-radius: 2em;
+
+
+}
+
+.time {
+    color: rgb(205, 220, 248);
+    border-radius: 2em;
+
+}

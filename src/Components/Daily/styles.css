@@ -1,0 +1,57 @@
+.weeklyDrop{
+    background-color: #5b6efd;
+    border: 1px solid rgb(205, 220, 248);
+    border-radius: 1em;
+    color: rgb(205, 220, 248);
+}
+
+
+.weeklyDate, .weeklyTemp {
+    font-size: 1.5em;
+}
+
+
+.dailyContent {
+    display: flex;
+    overflow-x: scroll;
+    width: 560px;
+    overflow-y: hidden;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+
+
+.dailyItem {
+border: 5px solid #c3f0c8;
+background-color: #c3f0c8;
+color: #6e6b6b;
+width: 320px;
+/* height: 135px; */
+padding: .5rem;
+text-align: center;
+border-radius: 1em;
+margin: 3px;
+display: flex;
+/* flex-direction: column; */
+justify-content: center;
+align-items: center;
+gap: 20px;
+}
+
+.dailyIconImg {
+width: 56px;
+}
+
+.dailyContainer {
+/* width: 515px; */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+
+.weekly {
+font-size: 2rem;
+color:rgb(205, 220, 248);
+}

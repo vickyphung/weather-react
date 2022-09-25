@@ -1,55 +1,68 @@
 .currentContent{
     margin-top: 2em;
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.currentBox {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .currentMain {
-    border: 5px solid #eea56c;
-    border-radius: .75em;
-    padding: .5em;
-    background-color: #5b6efd;
-    color: white;
-    align-items: center;
-    justify-content: space-around;
-    display: flex;
-    flex-direction: column;
-    width: 382px;
+    border: 1px solid #c3f0c8;
+    border-radius: 1em;
+    padding: 1em;
+    background-color: #c3f0c8;
+    color: #6e6b6b;
+    width: 320px;
+    height: 330px;
 }
+
+.currentOther {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.z {
+    display: flex;
+    align-content: center;
+}
+
+
 .weatherIcon {
     width: 100px;
     height:auto;
+    margin-bottom: -2.5rem;
 }
 .currentTemp{
-    font-size: 2.75vw;
+    font-size: 2.5vw;
 }
 .currentItem {
-    border: 5px solid #eea56c;
-    border-radius: .75em;
-    padding: 1em;
-    background-color: #5b6efd;
-    color: white;
+    border: 5px solid #c3f0c8;
+    border-radius: 1em;
+    padding: .5em;
+    background-color: #c3f0c8;
+    color: #6e6b6b;
     /* display: flex; */
-    width: 90px;
-    flex-wrap: wrap;
-    margin: 5px;
+    width: 88px;
+    margin: .5em;
 }
 
-.currentOther{
-    display: flex;
-}
+
 
 img {
     width: 75px;
 }
 
-.flexCol {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
+
 
 .heading {
     font-weight: bold;
@@ -57,26 +70,4 @@ img {
 
 .showBtn {
     margin: 2rem;
-}
-.weekBtn {
-    text-align: center;
-    border-radius: .5em;
-    margin-top: .5rem;
-    font-size: 2vw;
-    padding: 1rem;
-    background-color: rgb(255, 255, 255);
-    border: none;
-}
-
-.weekBtn:hover {
-    background-color: rgb(255, 232, 236);
-}
-
-.z {
-    display: flex;
-    align-content: center;
-}
-
-.hourContainer {
-    margin: 1rem;
 }

@@ -3,6 +3,7 @@ import axios from 'axios'
 import Daily from '../Daily'
 import Hour from '../Hour'
 import Current from '../Current'
+import './styles.css'
 
 function Weather(props) {
 
