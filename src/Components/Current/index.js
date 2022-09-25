@@ -14,7 +14,7 @@ const Current = (props) => {
             <img
               className="weatherIcon"
               alt="current weather"
-              src={`http://openweathermap.org/img/wn/${props.currentData.weather[0].icon}@2x.png`}
+              src={`https://openweathermap.org/img/wn/${props.currentData.weather[0].icon}@2x.png`}
             />
 
             <p className="currentTemp">
