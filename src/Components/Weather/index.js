@@ -21,6 +21,8 @@ function Weather(props) {
             daily: weatherResponse.daily
           })
           console.log(weatherResponse)
+          console.log('Weather Data fetched.');
+
         }
       }
     fetchData();

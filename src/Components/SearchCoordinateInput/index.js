@@ -14,6 +14,7 @@ function SearchCoordinateInput (props) {
   const handleSubmit = (event) => {
     event.preventDefault()
     props.setZipcode(formData)
+    console.log("Zipcode input from form accepted")
   }
   
   return (
