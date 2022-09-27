@@ -1,3 +1,4 @@
+
 import {useState} from 'react'
 import SearchCoordinateInput from '../SearchCoordinateInput';
 import SearchCoordinate from '../SearchCoordinate';
