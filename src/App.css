@@ -87,3 +87,96 @@
   box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 
+a {
+  text-decoration: none;
+  border-radius: .25em;
+  padding: .45rem;
+  background-color: rgb(233, 210, 241);
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: 2em;
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.dateSearch {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.zipData{
+  display: flex;
+  gap: 2rem;
+  letter-spacing: .25px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #b2bbfc ;
+  color: white;
+  border-radius: 2em;
+  width: 400px;
+  padding: 1em;
+}
+
+.searchForm {
+  display: flex;
+}
+  
+  
+.searchCoordForm {
+  padding: 2px;
+  text-align: center;
+  background-color: white ;
+  border: 3px solid #5b6efd;
+  border-radius: .5em;
+  color: #191414;
+  font-size: 1.75rem;
+}
+
+
+input[type=submit] {
+  padding: 12px;
+  border: 3px solid #5b6efd;
+  background-color: white;
+  cursor:pointer;
+  border-radius: 1em; 
+  font-size: .7em;
+  height: 48px;
+}
+
+  input[type=submit]:hover {
+    background-color: #5b6efd;
+  }
+  
+
+  .geolocate {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2.5rem;
+    font-size: 3vw;
+    padding: 5rem;
+    border-radius: 5em;
+    border: 5px solid gray;
+  }
+
