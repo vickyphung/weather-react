@@ -1,15 +1,13 @@
 import './App.css';
 // import { Route, Routes } from "react-router-dom";
 import { Routes, Route, useNavigate } from 'react-router-dom'
-
 import { useContext, useState } from 'react';
-import Home from './Home';
+// import Home from './HomeB';
 import Search from './Components/Search';
 import Nav from './Components/Nav';
 import Geolocate from './Components/Geolocate';
-
 import { ThemeContext } from './Components/Theme/theme-context';
-import SearchCoordinateInput from './Components/SearchCoordinateInput';
+import SearchCoordinateInput from './Components/Home';
 import SearchCoordinate from './Components/SearchCoordinate';
 import Weather from './Components/Weather';
 import DateTime from './Components/DateTime';

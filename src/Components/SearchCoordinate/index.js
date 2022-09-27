@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Weather from "../Weather";
+// import Weather from "../Weather";
 import Current from '../Current'
 import Daily from '../Daily'
 import Hour from '../Hour'
@@ -57,7 +57,7 @@ function SearchCoordinate(props) {
       console.log("^^^^^^^HELLO the weather data is HERE in SEARCH COORD");
     };
     fetchData();
-  }, [props.zipcodeInput, props, zipData.lat, zipData.lon]);
+  }, [props.zipcodeInput, props, zipData.lat, zipData.lon, lat, lon]);
 
   return (
     <div className="zipData">

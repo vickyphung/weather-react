@@ -1,6 +1,6 @@
 
 import {useState} from 'react'
-import SearchCoordinateInput from '../SearchCoordinateInput';
+// import SearchCoordinateInput from '../Home';
 import SearchCoordinate from '../SearchCoordinate';
 import Weather from '../Weather'
 

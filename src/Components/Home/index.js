@@ -3,7 +3,7 @@ import SearchCoordinate from '../SearchCoordinate'
 import './styles.css'
 
 //form to input zipcode
-function SearchCoordinateInput (props) {
+function Home (props) {
 
   const [formData, setFormData] = useState('22312')
 
@@ -37,4 +37,4 @@ function SearchCoordinateInput (props) {
       );
     }
 
-export default SearchCoordinateInput;
+export default Home;
