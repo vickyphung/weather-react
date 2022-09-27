@@ -13,8 +13,17 @@
   align-items: center;
 }
 
+.titleDate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .bg-light {
   background-color: #5b6efd;
+  text-align: center;
+
 }
 
 .heading-light {

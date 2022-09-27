@@ -1,10 +1,13 @@
 import { useState } from 'react'
-
+import SearchCoordinate from '../SearchCoordinate'
+import './styles.css'
 
 //form to input zipcode
 function SearchCoordinateInput (props) {
 
   const [formData, setFormData] = useState('22312')
+
+
 
   const handleChange = (event) => {
     setFormData(event.target.value)
@@ -23,6 +26,10 @@ function SearchCoordinateInput (props) {
             <input className="searchCoordForm" name="zip" id="zip" placeholder="Zipcode" onChange={handleChange} /> <br></br>
             <input className="submitBtn" type="submit" value="🔍" />
           </form>
+          </div>
+
+          <div>
+
           </div>
         </div>
       );

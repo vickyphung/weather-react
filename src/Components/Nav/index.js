@@ -9,7 +9,7 @@ function Nav() {
   return (
     <div className={`bg ${darkMode ? "bg-dark" : "bg-light"} para ${darkMode ? "para-dark" : "para-light"}`}>  
     <div className="navBar">
-      <p><Link className={`btn ${darkMode ? "btn-dark" : "btn-light"}`} to='/'>weather</Link></p>
+      <p><Link className={`btn ${darkMode ? "btn-dark" : "btn-light"}`} to='/'>zipcode lookup</Link></p>
       <p><Link className={`btn ${darkMode ? "btn-dark" : "btn-light"}`} to='/geolocate'>geolocate</Link></p>
       <ThemedButton />
     </div>

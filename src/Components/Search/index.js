@@ -7,17 +7,21 @@ import Weather from '../Weather'
 //connects search coordinate form and search coordinate function
 function Search () {
     
-    const [zipcodeInput, setZipcodeInput] = useState('22312')
-    const setZipcodeInputAndLink = (zipcode) => {
-        setZipcodeInput(zipcode)
-    }    
+    // const [zipcodeInput, setZipcodeInput] = useState('')
+    // const setZipcodeInputAndLink = (zipcode) => {
+    //     setZipcodeInput(zipcode)
+    // }    
 
-    const [lat, setLat] = useState([]);
+    const [lat, setLat] = useState({
+    lat: 38.8191
+    });
     const setLatAndLink = (lat) => {
         setLat(lat)
     }
     
-    const [lon, setLon] = useState([]);
+    const [lon, setLon] = useState({
+       lon: -77.1484
+    });
     const setLonAndLink = (lon) => {
         setLon(lon)
     }
@@ -27,11 +31,11 @@ function Search () {
             
             <div className='search'>
                 <div>
-                  <SearchCoordinate zipcodeInput={zipcodeInput} setLatitude={setLatAndLink} setLongitude={setLonAndLink}/>
+                  <SearchCoordinate setLatitude={setLatAndLink} setLongitude={setLonAndLink}/>
                 </div>
-                <div>
+                {/* <div>
                     <SearchCoordinateInput setZipcode={setZipcodeInputAndLink}/>
-                </div>
+                </div> */}
             </div>
             <div><Weather lat={lat} lon={lon}/></div>
 

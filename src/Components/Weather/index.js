@@ -21,7 +21,10 @@ function Weather(props) {
             daily: weatherResponse.daily
           })
           console.log(weatherResponse)
-        }
+        }else {
+          console.log('error')
+      }
+
       }
     fetchData();
   }, [props.lat, props.lon])

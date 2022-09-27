@@ -30,21 +30,21 @@
     flex-direction: column;
 }
 
-
 .z {
     display: flex;
     align-content: center;
 }
-
 
 .weatherIcon {
     width: 100px;
     height:auto;
     margin-bottom: -2.5rem;
 }
+
 .currentTemp{
     font-size: 2rem;
 }
+
 .currentItem {
     border: 5px solid #c3f0c8;
     border-radius: 1em;
@@ -55,8 +55,6 @@
     width: 88px;
     margin: .5em;
 }
-
-
 
 img {
     width: 75px;

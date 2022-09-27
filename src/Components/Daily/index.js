@@ -120,11 +120,13 @@ import {
 // export default Daily;
 
 const Daily = (props) => {
-  console.log("Made it to the Current Component");
+  console.log("Made it to the Weekly Component");
 
   if (props.dailyData) {
     return (
       <div>
+        {console.log(props)}
+
         <Accordion allowToggle>
           <AccordionItem>
             <h2>

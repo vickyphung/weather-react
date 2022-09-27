@@ -6,9 +6,6 @@ import DateTime from "../Components/DateTime";
 function Home(props) {
   return (
     <div className="homeContent">
-      <h1>
-        <span className="title">Weather</span>
-      </h1>
       <div className="dateSearch">
         <DateTime />
         <Search />
