@@ -31,6 +31,8 @@ function SearchCoordinateInput (props) {
           <div>
 
           </div>
+
+          <SearchCoordinate />
         </div>
       );
     }
